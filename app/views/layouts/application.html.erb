@@ -20,5 +20,24 @@
 
       <%= yield %>
     </div>
+
+    <div id="sidebar">
+      <div class="header">
+      </div>
+
+      <ul>
+        <li>Folders</li>
+
+        <% all_folders do |folder| %>
+          <li><%= link_to folder.name, folder %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div id="content">
+      <div class="header">
+      </div>
+    </div>
+
   </body>
 </html>
